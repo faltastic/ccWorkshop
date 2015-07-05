@@ -81,7 +81,7 @@
     <p data-sr="roll 15deg, wait 0.5s, over 1.0s"> Rolling </p> 
 
  		<div data-sr="wait 2.5s, ease-in-out 100px" class="nine columns">	
- 			<p data-sr> From left </p>
+ 			<p data-sr> What the fuck </p>
         </div>
     	<div data-sr='wait 0.5s enter right ease-in-out 100px' class="eight columns" >
     		<div id="myCanvas"></div>
