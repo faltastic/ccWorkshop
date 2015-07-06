@@ -9,16 +9,17 @@ var img, imgW, imgH;
 
 
 function preload(){
-  img = loadImage("assests/img/cc4artists.png");
+  img = loadImage("assests/img/cc.png");
 }
 
 function setup() {
   
-  var myCanvas = createCanvas(windowWidth/1.2,windowWidth/1.7);
+  var myCanvas = createCanvas(windowWidth/1.5,windowWidth/2.5);
   myCanvas.parent("myBanner");
   //createCanvas(710, 400);
   
   frameRate(20);
+  smooth();
   imageMode(CENTER);
 
   // Create walkers
@@ -34,13 +35,13 @@ function setup() {
 
   // for mobile
   if(width>500) {
-    strW = 2; elpW = 3;
-    imgW = width/2;
+    strW = 1.6; elpW = 2.0;
+    imgW = width/4;
     imgH = img.height*imgW/img.width;
   }
   else {
     strW = 0.8; elpW = 1.4;
-    imgW = width/1.5;
+    imgW = width/2;
     imgH = img.height*imgW/img.width;
   }
 
@@ -51,19 +52,15 @@ function setup() {
 function draw() {
   
   noStroke();
-  fill(255,20);
+  fill(255,50);
   rect(0,0,width,height);
-  var o = map(mouseX,0,width,1,8);
+  var o = round(map(mouseX,0,width,1,8));
   var f = map(mouseY, 0, height, 0.01, 0.8);
-  //noiseDetail(o,f);
-  //println(o + "  " +f);
+  //noiseDetail(4,f);
   
-  image(img,width/2,height/2,imgW, imgH);
-
-  if (frameCount % 30 == 0) {
+  if (frameCount % 30 == 0 ) {
     if( down == true ) n--;
     else n++;
-    
   }
  
   if (n < 1) {
@@ -73,7 +70,7 @@ function draw() {
 
    }
 
-  if (n > N-1) {down=true;hue = random(255);}
+  if (n ==N) {down=true;}//hue = random(255);}
 
 
   for (var i = 0; i < n; i++) {
@@ -85,12 +82,15 @@ function draw() {
 
       if(i!=j){  
         strokeWeight(strW);
-        stroke(hue,200,160,40);
+        stroke(hue,200,160,30);
         line(w[i].x,w[i].y,w[j].x,w[j].y);
       }
     }
   }
-  
+  if (frameCount % 20 == 0) hue=(hue+1)%255;
+
+  image(img,width/2,height/2,imgW, imgH);
+
 }
 
 // Walker class

@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Creative Coding Workshop</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -24,21 +24,18 @@
   <link rel="stylesheet" href="assests/css/typed.css">
 
   <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="assests/img/favicon.png">
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --
+  <link rel="icon" type="image/png" href="assests/img/favicon.png"-->
   
 
   <!-- JavaScript
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script language="javascript" src="assests/js/p5.min.js"></script>
-  <script language="javascript" src="assests/js/p5.sound.js"></script>
-  <script language="javascript" src="assests/js/p5.dom.js"></script>
+  <!--script language="javascript" src="assests/js/p5.sound.js"></script>
+  <script language="javascript" src="assests/js/p5.dom.js"></script-->
 
    
   <script language="javascript" src="banner.js"></script>
-
-
-
 
 </head>
 
@@ -50,40 +47,81 @@
   <div class="container">
 
   <div class="row">
-      <div style="margin-top: 1%">
+      <div style="center">
           <div id="myBanner"></div>
       </div>
   </div>
   
-    <div class="row">
-      <div class="five columns" style="margin-top: 10%">
-        <span class="typedText"> </span>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
+    <div data-sr class="row">
+      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+        <h4>
+           <span class="typedText"> </span>
+        </h4>
+        <br/><br/>
+
+        <p> For <strong>artists</strong> who want to explore code as a medium.
+        <br /> <br />
+        For <strong>designers</strong> who want to create interactive user experiences.
+        <br /> <br />
+        For <strong> programmers </strong> who want to build creative applications. 
+        </p>
+        </div>
+	</div>
+
+	<div data-sr class="row">
+        <div class="six columns" style="margin-top:10%;">
+      
+			<p> If you want to learn how to <strong> express your creative ideas by writing computer programs</strong>, then this workshop is for you. </p>
+
+			<br />
+		    <p> You will learn to <br />
+
+				<ul> 
+					<li> develop your practical programming skills </li>
+					<li> use algorithms to make animated gifs </li>
+					<li> build interactive websites</li>
+				    <li> manipulate individual pixels on an image</li>    
+			 		<li> explore glitch art</li>
+					<li> perform face tracking on a live webcam</li>
+					<li> turn data into sound</li>
+					<li> create your own music visualizer</li>
+				</ul>
+	        </p>
+	        <br>
+	        <p> To do this, we will be using the programming language <a href="https://processing.org/">Processing</a> and its web interpertation <a href="http://p5js.org/">p5.js</a>.
+
+        </div>
+        <div class="six columns" style="margin-top:10%;">
+
+			<h5> Details </h5>
+
+			<p> <strong>What. </strong> A three-week creative coding workshop + one week to develop a final project. 
+			<br> <strong>When. </strong> 10 Aug. - 10 Sep. 2015.
+
+			<br> <strong>Where. </strong> Medrar for Contemporay Arts, Cairo.
+
+			<br> <strong>Who. </strong> Instructor - Youssef Faltas.
+
+			<br> <strong>How much. </strong> 500 LE. </p> 
+
+			<h5> FAQ </h5>
+
+			<p> <strong> Do I need to be a programmer to join this workshop? </strong> 
+			<br> No. But you need to have no fear of writing code.</p>
+
+			<p> <strong> Do I need to be an artist to join this workshop? </strong> 
+			<br> No. But you need to have no fear of making art.</p>
+
+			<p> <strong> Computer requirements? </strong> 
+			<br> Your own laptop running Windows, Mac OS X, or Linux.</p>
+
+			<p> <strong> What can my final project be? </strong> 
+			<br> Final projects will be personal creations. They can be whatever you want to use creative coding for. <br> A gif. Graphic prints. An animation. A video. A song. A webpage. </p>
+
+	     </div>
     </div>
-
-    <div class="row">
-    	<div class="eight columns" >
-    		<div id="myCanvas1"></div>
-    	</div>
-    </div>
-     
-
-    <div class="row">
-      <div class="one-half column" style="margin-top: 10%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
-    </div>
-
-
-    <div class="row">
-    	<div class="eight columns" >
-    		<div id="myCanvas2"></div>
-    	</div>
-    </div>
-
-    <div class="row">
+    
+    <!--div class="row">
     
     <p data-sr="roll 15deg, wait 0.5s, over 1.0s"> Rolling </p> 
 
@@ -95,13 +133,8 @@
     	</div>
     	<br />
         
-    </div>
+    </div-->
   
-
-
-
-
-
 
   </div>
 
@@ -110,7 +143,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script language="javascript" src="assests/js/scrollReveal.min.js"></script>
-
   <script language="javascript" src="assests/js/jquery.min.js"></script>
   <script language="javascript" src="assests/js/typed.min.js"></script>
 
@@ -119,8 +151,20 @@
   <script>
     $(function(){
         $(".typedText").typed({
-            strings: ["First sentence.", "Second sentence."],
-            typeSpeed: 0
+            strings: ["A workshop ^1000 for ^1000artists.",
+            		  "A workshop for artists ^500 and ^1000 designers.",
+            		  "A workshop for artists, designers^500, and ^1000 programmers."],
+            typeSpeed: 10,
+            // time before typing starts
+            startDelay: 20000,
+            // backspacing speed
+            backSpeed: 10,
+            // time before backspacing
+            backDelay: 500,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: 2,
         });
     });
   </script>

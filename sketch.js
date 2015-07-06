@@ -26,7 +26,7 @@ function setup() {
   var myCanvas = createCanvas(canvasSize, canvasSize);
   */
  
-  var myCanvas = createCanvas(windowWidth/1.5,windowHeight/1.5);
+  var myCanvas = createCanvas(windowWidth/1.8,windowHeight/1.8);
   myCanvas.parent("myCanvas");
   smooth();
   noFill();
