@@ -88,9 +88,11 @@ function draw() {
     }
   }
   if (frameCount % 20 == 0) hue=(hue+1)%255;
-
+  
+  // var trans = map(dist(mouseX, mouseY, width/2,height/2),0,width/2,255,0);
+  // tint(255,255,255,trans);
   image(img,width/2,height/2,imgW, imgH);
-
+  //noTint();
 }
 
 // Walker class
