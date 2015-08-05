@@ -37,26 +37,58 @@
    
   <script language="javascript" src="banner.js"></script>
 
+
+  <script language="javascript" src="assests/js/jquery.min.js"></script>
+
+  <script>
+	$(document).ready(function(){
+        //$("#AR").css("display","none");
+        $("#EN").css("display","none");
+	    $("#ARbutton").click(function(){
+	    	$("#EN").hide();
+	        $("#AR").show();
+	    });
+	    $("#ENbutton").click(function(){
+	        $("#AR").hide();
+	        $("#EN").show();
+	    });
+	});
+</script>
+  
+  
+
 </head>
 
 
 <body>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
 
-  <div class="row">
-      <div style="center">
-          <div id="myBanner"></div>
-      </div>
+<div class="row">
+  <div style="center">
+      <div id="myBanner"></div>
   </div>
-  
-    <div data-sr class="row">
-      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
-        <h4>
+</div>
+
+
+
+<div class="row">
+    <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+        <h5>
            <span class="typedText"> </span>
-        </h4>
+        </h5>
+    </div>
+</div>
+
+
+
+<!-- English -->
+
+<div id="EN">
+    <div class="row">
+      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
         <br/><br/>
 
         <p> For <strong>artists</strong> who want to explore code as a medium.
@@ -65,10 +97,11 @@
         <br /> <br />
         For <strong> programmers </strong> who want to build creative applications. 
         </p>
-        </div>
-	</div>
+      </div>
+    </div>
+   
 
-	<div data-sr class="row">
+	<div class="row">
         <div class="six columns" style="margin-top:10%;">
       
 			<p> If you want to learn how to <strong> express your creative ideas by writing computer programs</strong>, then this workshop is for you. </p>
@@ -92,7 +125,7 @@
 	        <br />
 	        <p>
 	        
-	        <div style="text-align:center; margin-left: auto;margin-right: auto;">
+	        <div data-sr='wait 0.5s enter left ease-in-out 100px' style="text-align:center; margin-left: auto;margin-right: auto;">
 	            <a class="button button-primary" target="_blank" href="https://docs.google.com/forms/d/1oXvj5UtRQW6eJx-tYSLt2fmNx9HJz8i-JO4vM92gGZ8/viewform">Apply</a> 
 	            <br />The deadline is August 3rd. 
 	        </div>
@@ -122,6 +155,7 @@
 			
 			<br> <strong>How much. </strong> 500 LE. </p> 
 
+			
 			<h5> FAQ </h5>
 
 			<p> <strong> Do I need to be a programmer to join this workshop? </strong> 
@@ -135,38 +169,142 @@
 
 			<p> <strong> What can my final project be? </strong> 
 			<br> Final projects will be personal creations. They can be whatever you want to use creative coding for. <br> A gif. Graphic prints. An animation. A video. A song. A webpage. </p>
-
+                        
 	     </div>
     </div>
     
-    <!--div class="row">
-    
-    <p data-sr="roll 15deg, wait 0.5s, over 1.0s"> Rolling </p> 
+</div> 
 
- 		<div data-sr="wait 2.5s, ease-in-out 100px" class="nine columns">	
- 			<p data-sr> From Below </p>
-        </div>
-    	<div data-sr='wait 0.5s enter right ease-in-out 100px' class="eight columns" >
-    		<div id="myCanvas"></div>
-    	</div>
-    	<br />
-        
-    </div-->
+
+<div class="arab rtl" id="AR">
+
+    <div class="row">
+      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+     
+         
   
+        <h6 class="arab"> 
+        <strong>
+        <br />
+        تستهدف الورشة الفنانين والمصممين والمبرمجين 
+        </strong>
+        <br /> <br />
+         فهي مصممة للفنانين الراغبين في استخدام البرمجة كوسيط فني  <br /> وللمصممين الراغبين في بناء تجارب تفاعلية  <br />وكذلك المبرمجين الراغبين في تطوير تطبيقات إبداعية. 
+        </h6>
+        </div>
+	</div>
 
-  </div>
+	<div class="row">
+	
+	
+        <div class="six columns" style="margin-top:10%;">
+
+			<h4 class="arab"> <strong>التفاصيل </strong></h4>
+
+			<p class="arab"> تعلن مدرار للفن المعاصر عن فتح باب التقدم لورشة البرمجة الإبداعية، التي ستقام في الفترة من  ٥ سبتمبر إلي ١ اكتوبر ٢٠١٥، ويديرها يوسف فلتس. </p> 
+			
+			<p class="arab"> 
+			يقام عرض لنتاج الورشة لمدة يوم واحد بمقر مدرار في بداية شهر أكتوبر (يعلن عن التاريخ لاحقًا)
+			</p>
+
+			
+			<p class="arab">
+                         <br /> <strong>
+			                                                        
+			                                                        شروط التقدم
+			                                                        </br> </strong>
+			                                                        <ul>
+			                                                        
+			                                                  
+			                              <li>                          لاب توب شخصي
+			                               </li><li>
+			                                                      
+التفرغ أيام الورشة: أيام السبت والاثنين والأربعاء  من الساعة ٧ مساءً إلى الساعة ٩ مساءً على مدار مدة الورشة.
+</li><li>
+يتم دفع رسوم الاشتراك بعد قبول طلب الالتحاق بمقر مدرار في موعد أقصاه ٣ سبتمبر
+</li><li>
+لا يحق للمشارك سحب قيمة الاشتراك بعد بدء الورشة والانتظام فيها.
+</li><li>
+آخر موعد لإرسال طلبات الالتحاق ٢٨ أغسطس ٢٠١٥ ويتم اخطار المشاركين ١ سبتمبر ٢٠١٥.
+
+</li></ul></p>
+			
+			
+
+
+			<p  class="arab"> <strong> عن المدرب </strong> 
+			<br>
+			<a target="_blank" href="http://faltastico.tumblr.com/">  يوسف فلتس</a>
+			
+			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقميية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
+                        
+	     </div>
+        <div class="six columns" style="margin-top:10%;">
+      
+			<p class="arab">
+			علي الفنانين الراغبين في الاشتراك الاستعداد لكتابة البرامج وكذلك علي المبرمجين الاستعداد لصناعة الفن. 
+			</p>
+
+			
+		    <p class="arab"> سوف تتعلم <br />
+
+				<ul> 
+					<li> تطوير مهراتك العملية في البرمجة </li>
+					<li> استخدام الخوارزميات لعمل GIF متحرك </li>
+					
+			 		<li> بناء مواقع إلكترونية تفاعلية</li>
+			 		<li> استكشاف فن الGlitch </li>
+					<li> تعقب الوجه من خلال كاميرا الويب</li>
+					<li> تحويل البيانات لمواد صوتية </li>
+					<li> بناء مصور موسيقي (music visualizer) الخاص بك</li>
+				</ul>
+
+		  </p>
+	        
+	        <p class="arab"> 
+	        سنستخدم في الورشة لغة البرمجة
+	         <a target="_blank" href="https://processing.org/">Processing</a> 
+	         و تطبيقها للويب
+	          <a target="_blank" href="http://p5js.org/">p5.js</a>.</p>
+
+	        <br />
+	        <p class="arab">
+	        
+	        <div data-sr='wait 0.5s enter left ease-in-out 100px' style="text-align:center; margin-left: auto;margin-right: auto;">
+	            <a class="button button-primary arab" target="_blank" href="https://docs.google.com/forms/d/1oXvj5UtRQW6eJx-tYSLt2fmNx9HJz8i-JO4vM92gGZ8/viewform">  قدم </a> 
+	            <br /> <small> قبل ٢٨ أغسطس </small>
+	        </div>
+	        </p>
+
+	        <p class="arab"> لمزيد من المعلومات، راسل المدرب على
+	        <br/>youssef.faltas@gmail.com</p>
+	        
+	        
+	        
+
+        </div>
+    </div>
+    
+</div> 
+
+
+<!-- EN AR buttons -->
+
+<div  style="text-align:center; margin-left: auto;margin-right: auto;">  
+	<button id="ENbutton">English</button>
+	<button id="ARbutton" class="arab"> <small> عربي </small></button>
+</div>
+
+</div>
 
 
 <!-- More Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script language="javascript" src="assests/js/scrollReveal.min.js"></script>
-  <script language="javascript" src="assests/js/jquery.min.js"></script>
   <script language="javascript" src="assests/js/typed.min.js"></script>
-
   
-  
-  <script>
+<script>
     $(function(){
         $(".typedText").typed({
             strings: ["A workshop ^1000 for ^1000artists.",
@@ -174,7 +312,7 @@
             		  "A workshop for artists, designers^500, and ^1000 programmers."],
             typeSpeed: 10,
             // time before typing starts
-            startDelay: 20000,
+            startDelay: 6000,
             // backspacing speed
             backSpeed: 10,
             // time before backspacing

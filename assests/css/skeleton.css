@@ -28,13 +28,16 @@
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .container {
   position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  
+  }
 .column,
 .columns {
   width: 100%;
@@ -113,6 +116,24 @@
 }
 
 
+/*Fonts */
+
+
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+// @import url(http://fonts.googleapis.com/earlyaccess/notokufiarabic.css);
+@font-face
+{
+font-family:'Wasm';
+src: url('WasmFont.ttf') format('TrueType');
+}
+
+@font-face
+{
+font-family:'NotoNaskh';
+src: url('NotoKufiArabic-Regular.ttf') format('TrueType');
+}
+
+
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* NOTE
@@ -124,9 +145,24 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  //font-family: 'Noto Sans', sans-serif;
+   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
 
+  cursor: url(assests/img/black-cursor.cur), auto;
+   }
+
+.arab{
+
+direction: rtl;
+  //font-family:  'Wasm'; 
+  font-family: 'NotoNaskh';
+  font-weight: normal;
+  font-size: 1.0em;
+  line-height: 1.6;
+  margin-bottom: 1.25em;
+  text-rendering: optimizeLegibility; 
+}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

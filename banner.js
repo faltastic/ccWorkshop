@@ -1,7 +1,7 @@
 
 var w = []; // array of Jitter objects
-var n, N = 20;
-var down = true;
+var n, N = 15;
+var down = false;
 
 var hue ;
 var strW, elpW;
@@ -14,7 +14,7 @@ function preload(){
 
 function setup() {
   
-  var myCanvas = createCanvas(windowWidth/1.5,windowWidth/2.5);
+  var myCanvas = createCanvas(windowWidth/1.4,windowWidth/2.5);
   myCanvas.parent("myBanner");
   //createCanvas(710, 400);
   
@@ -26,7 +26,7 @@ function setup() {
   for (var i=0; i<N; i++) {
     w.push(new Walker());
   }
-  n = 0;
+  n = 3;
   
   // color defintions
   colorMode(HSB);
@@ -58,7 +58,7 @@ function draw() {
   var f = map(mouseY, 0, height, 0.01, 0.8);
   //noiseDetail(4,f);
   
-  if (frameCount % 30 == 0 ) {
+  if (frameCount % 25 == 0 ) {
     if( down == true ) n--;
     else n++;
   }
@@ -76,6 +76,7 @@ function draw() {
   for (var i = 0; i < n; i++) {
     
     w[i].walk();
+    w[i].mouseReact();
     w[i].display();
     
     for (var j = 0; j <= i; j++) {
@@ -127,6 +128,19 @@ function Walker() {
     this.noffx += 0.01;
     this.noffy += 0.01;
   }
+  
+  // Walk
+  this.mouseReact =function() {
+    
+    var deltax = map(mouseX, 0,width,width/8,-width/8);
+    var deltay = map(mouseY, 0,height,height/18,-height/18);
+
+    this.x = constrain(this.x+deltax,0,width);
+    this.y = constrain(this.y+deltay,0,height);
+
+  
+  }
+
 }
 /*
 function initWalkers(){
