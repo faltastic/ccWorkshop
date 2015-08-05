@@ -55,25 +55,6 @@ $("#EN").css("display","none");
   
 
 
-  <script language="javascript" src="assests/js/jquery.min.js"></script>
-
-  <script>
-	$(document).ready(function(){
-        $("#AR").css("display","none");
-        $("#EN").css("display","none");
-	    $("#ARbutton").click(function(){
-	    	$("#EN").hide();
-	        $("#AR").show();
-	    });
-	    $("#ENbutton").click(function(){
-	        $("#AR").hide();
-	        $("#EN").show();
-	    });
-	});
-</script>
-  
-  
-
 </head>
 
 
@@ -85,9 +66,9 @@ $("#EN").css("display","none");
 
 <div class="row">
 
-  <div style="text-align:center; margin-left: auto;margin-right: auto;">
   <div style="center">
 
+  <div style="text-align:center; margin-left: auto;margin-right: auto;">
       <div id="myBanner"></div>
   </div>
 </div>
@@ -229,28 +210,6 @@ $("#EN").css("display","none");
 
 			
 			<p class="arab">
-
-			<br /> <strong>
-								                                
-								                                شروط التقدم
-			 </br> </strong> 
-			 <ul>
-								                          					                          
-		      <li>                          لاب توب شخصي
-		       </li><li>
-								                              
-			التفرغ أيام الورشة: أيام السبت والاثنين والأربعاء  من الساعة ٧ مساءً إلى الساعة ٩ مساءً على مدار مدة الورشة.
-			</li><li>
-			يتم دفع رسوم الاشتراك بعد قبول طلب الالتحاق بمقر مدرار في موعد أقصاه ٣ سبتمبر
-			</li><li>
-			لا يحق للمشارك سحب قيمة الاشتراك بعد بدء الورشة والانتظام فيها.
-			</li><li>
-			آخر موعد لإرسال طلبات الالتحاق ٢٨ أغسطس ٢٠١٥ ويتم اخطار المشاركين ١ سبتمبر ٢٠١٥.
-
-			</li></ul></p>
-		
-		
-=======
                          <br /> <strong>
 			                                                        
 			                                                        شروط التقدم
@@ -271,6 +230,27 @@ $("#EN").css("display","none");
 
 </li></ul></p>
 			
+			
+			<br /> <strong>
+								                                
+								                                شروط التقدم
+			 </br> </strong> 
+			 <ul>
+								                          					                          
+		      <li>                          لاب توب شخصي
+		       </li><li>
+								                              
+			التفرغ أيام الورشة: أيام السبت والاثنين والأربعاء  من الساعة ٧ مساءً إلى الساعة ٩ مساءً على مدار مدة الورشة.
+			</li><li>
+			يتم دفع رسوم الاشتراك بعد قبول طلب الالتحاق بمقر مدرار في موعد أقصاه ٣ سبتمبر
+			</li><li>
+			لا يحق للمشارك سحب قيمة الاشتراك بعد بدء الورشة والانتظام فيها.
+			</li><li>
+			آخر موعد لإرسال طلبات الالتحاق ٢٨ أغسطس ٢٠١٥ ويتم اخطار المشاركين ١ سبتمبر ٢٠١٥.
+
+			</li></ul></p>
+		
+		
 
 
 
@@ -279,10 +259,10 @@ $("#EN").css("display","none");
 			<a target="_blank" href="http://faltastico.tumblr.com/">  يوسف فلتس</a>
 			
 
+			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقميية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
+
 			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقمية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
 
-			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقميية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
-                        
 	     </div>
         <div class="six columns" style="margin-top:10%;">
       
@@ -336,16 +316,9 @@ $("#EN").css("display","none");
 <!-- EN AR buttons -->
 
 <div  style="text-align:center; margin-left: auto;margin-right: auto;">  
-<<<<<<< HEAD
-	
 	<button id="ENbutton">English</button>
 	<button id="ARbutton" class="arab"> <small> عربي </small></button>
-	
 	<br /> <br />
-=======
-	<button id="ENbutton">English</button>
-	<button id="ARbutton" class="arab"> <small> عربي </small></button>
->>>>>>> arabic
 </div>
 
 </div>
