@@ -1,22 +1,18 @@
 
 var w = []; // array of Jitter objects
-var n, N = 20;
+var n, N = 10;
 var down = true;
 
 var hue ;
 var strW, elpW;
-var img, imgW, imgH;
 
 
-function preload(){
-  img = loadImage("assests/img/cc.png");
-}
 
 function setup() {
   
   var myCanvas = createCanvas(windowWidth/1.5,windowWidth/2.5);
   myCanvas.parent("myBanner");
-  //createCanvas(710, 400);
+
   
   frameRate(20);
   smooth();
@@ -35,14 +31,10 @@ function setup() {
 
   // for mobile
   if(width>500) {
-    strW = 1.6; elpW = 2.0;
-    imgW = width/4;
-    imgH = img.height*imgW/img.width;
+    strW = 1.4; elpW = 2.0;
   }
   else {
     strW = 0.8; elpW = 1.4;
-    imgW = width/2;
-    imgH = img.height*imgW/img.width;
   }
 
 
@@ -52,7 +44,7 @@ function setup() {
 function draw() {
   
   noStroke();
-  fill(255,50);
+  fill(255,80);
   rect(0,0,width,height);
   var o = round(map(mouseX,0,width,1,8));
   var f = map(mouseY, 0, height, 0.01, 0.8);
@@ -70,12 +62,13 @@ function draw() {
 
    }
 
-  if (n ==N) {down=true;}//hue = random(255);}
+  if (n ==N) {down=true;}
 
 
   for (var i = 0; i < n; i++) {
     
     w[i].walk();
+    w[i].mouseRepel();
     w[i].display();
     
     for (var j = 0; j <= i; j++) {
@@ -87,12 +80,8 @@ function draw() {
       }
     }
   }
-  if (frameCount % 20 == 0) hue=(hue+1)%255;
+  if (frameCount % 10 == 0) hue=(hue+1)%255;
   
-  // var trans = map(dist(mouseX, mouseY, width/2,height/2),0,width/2,255,0);
-  // tint(255,255,255,trans);
-  image(img,width/2,height/2,imgW, imgH);
-  //noTint();
 }
 
 // Walker class
@@ -127,12 +116,15 @@ function Walker() {
     this.noffx += 0.01;
     this.noffy += 0.01;
   }
-}
-/*
-function initWalkers(){
-  for (var i=0; i<N; i++) {
-    bugs.push(new Walker());
-  }
   
+  // Repel
+  this.mouseRepel =function() {
+    
+    var deltax = map(mouseX, 0,width,width/10,-width/10);
+    var deltay = map(mouseY, 0,height,height/10,-height/10);
+
+    this.x = constrain(this.x+deltax,0,width);
+    this.y = constrain(this.y+deltay,0,height);
+   }
 }
-*/
+
