@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Creative Coding Workshop</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="assests/css/normalize.css">
+  <link rel="stylesheet" href="assests/css/skeleton.css">
+  <link rel="stylesheet" href="assests/css/typed.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --
+  <link rel="icon" type="image/png" href="assests/img/favicon.png"-->
+  
+
+  <!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script language="javascript" src="assests/js/p5.min.js"></script>
+<script language="javascript" src="intro.js"></script>
+<script language="javascript" src="assests/js/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+$("#AR").css("display","none");
+$("#AR").css("display","none");
+
+$("#EN").css("display","none");
+    $("#ARbutton").click(function(){
+    	$("#EN").hide();
+        $("#AR").show();
+    });
+    $("#ENbutton").click(function(){
+        $("#AR").hide();
+        $("#EN").show();
+    });
+});
+</script>
+  
+  
+
+
+  <script language="javascript" src="assests/js/jquery.min.js"></script>
+
+  <script>
+	$(document).ready(function(){
+        $("#AR").css("display","none");
+        $("#EN").css("display","none");
+	    $("#ARbutton").click(function(){
+	    	$("#EN").hide();
+	        $("#AR").show();
+	    });
+	    $("#ENbutton").click(function(){
+	        $("#AR").hide();
+	        $("#EN").show();
+	    });
+	});
+</script>
+  
+  
+
+</head>
+
+
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+
+<div class="row">
+
+  <div style="text-align:center; margin-left: auto;margin-right: auto;">
+  <div style="center">
+
+      <div id="myBanner"></div>
+  </div>
+</div>
+
+
+
+<div class="row">
+    <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+        <h5>
+           <span class="typedText"> </span>
+        </h5>
+    </div>
+</div>
+
+
+
+<!-- English -->
+
+<div id="EN">
+    <div class="row">
+      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+        <br/><br/>
+
+        <p> For <strong>artists</strong> who want to explore code as a medium.
+        <br /> <br />
+        For <strong>designers</strong> who want to create interactive user experiences.
+        <br /> <br />
+        For <strong> programmers </strong> who want to build creative applications. 
+        </p>
+      </div>
+    </div>
+   
+
+	<div class="row">
+        <div class="six columns" style="margin-top:10%;">
+      
+			<p> If you want to learn how to <strong> express your creative ideas by writing computer programs</strong>, then this workshop is for you. </p>
+
+			
+		    <p> You will learn to <br />
+
+				<ul> 
+					<li> develop your practical programming skills </li>
+					<li> use algorithms to make animated gifs </li>
+					<li> build interactive websites</li>
+			 		<li> explore glitch art</li>
+					<li> perform face tracking on a live webcam</li>
+					<li> turn data into sound</li>
+					<li> create your own music visualizer</li>
+				</ul>
+	        </p>
+	        
+	        <p> To do this, we will be using the programming language <a target="_blank" href="https://processing.org/">Processing</a> and its web interpertation <a target="_blank" href="http://p5js.org/">p5.js</a>.</p>
+
+	        <br />
+	        <p>
+	        
+	        <div data-sr='wait 0.5s enter left ease-in-out 100px' style="text-align:center; margin-left: auto;margin-right: auto;">
+	            <a class="button button-primary" target="_blank" href="https://docs.google.com/forms/d/1oXvj5UtRQW6eJx-tYSLt2fmNx9HJz8i-JO4vM92gGZ8/viewform">Apply</a> 
+	            <br />The deadline is August 3rd. 
+	        </div>
+	        </p>
+
+	        <p> If you have any questions or enquiries, please direct them to 
+	        <br/>youssef.faltas@gmail.com</p>
+	        
+	        
+	        
+
+        </div>
+        <div class="six columns" style="margin-top:10%;">
+
+			<h5> Details </h5>
+
+			<p> <strong>What. </strong> A three-week creative coding workshop + one week to develop a final project. 
+			<br> <strong>When. </strong> 10 Aug. - 10 Sep. 2015.
+
+			<br> <strong>Where. </strong> <a target="_blank" href="http://www.medrar.org/"> Medrar </a>for Contemporary Arts, Cairo.
+
+			<br> <strong>Who. </strong> Instructor - <a target="_blank" href="http://faltastico.tumblr.com/">Youssef Faltas</a>.
+
+			<br> <strong>How often. </strong> Three 1.5-hours sessions each week. 
+
+			<br> <strong>How many. </strong> Not more than 10 particpants.
+			
+			<br> <strong>How much. </strong> 500 LE. </p> 
+
+			
+			<h5> FAQ </h5>
+
+			<p> <strong> Do I need to be a programmer to join this workshop? </strong> 
+			<br> No. But you need to have no fear of writing code.</p>
+
+			<p> <strong> Do I need to be an artist to join this workshop? </strong> 
+			<br> No. But you need to have no fear of making art.</p>
+
+			<p> <strong> Computer requirements? </strong> 
+			<br> Your own laptop running Windows, Mac OS X, or Linux.</p>
+
+			<p> <strong> What can my final project be? </strong> 
+			<br> Final projects will be personal creations. They can be whatever you want to use creative coding for. <br> A gif. Graphic prints. An animation. A video. A song. A webpage. </p>
+                        
+	     </div>
+    </div>
+    
+</div> 
+
+
+<div class="arab rtl" id="AR">
+
+    <div class="row">
+      <div  style="text-align:center; margin-left: auto;margin-right: auto;">
+     
+         
+  
+        <h6 class="arab"> 
+        <strong>
+        <br />
+        تستهدف الورشة الفنانين والمصممين والمبرمجين 
+        </strong>
+        <br /> <br />
+         فهي مصممة للفنانين الراغبين في استخدام البرمجة كوسيط فني  <br /> وللمصممين الراغبين في بناء تجارب تفاعلية  <br />وكذلك المبرمجين الراغبين في تطوير تطبيقات إبداعية. 
+        </h6>
+        </div>
+	</div>
+
+	<div class="row">
+	
+	
+        <div class="six columns" style="margin-top:10%;">
+
+			<h4 class="arab"> <strong>التفاصيل </strong></h4>
+
+			<p class="arab"> تعلن مدرار للفن المعاصر عن فتح باب التقدم لورشة البرمجة الإبداعية، التي ستقام في الفترة من  ٥ سبتمبر إلي ١ اكتوبر ٢٠١٥، ويديرها يوسف فلتس. </p> 
+			
+			<p class="arab"> 
+			يقام عرض لنتاج الورشة لمدة يوم واحد بمقر مدرار في بداية شهر أكتوبر (يعلن عن التاريخ لاحقًا)
+			</p>
+
+			
+			<p class="arab">
+
+			<br /> <strong>
+								                                
+								                                شروط التقدم
+			 </br> </strong> 
+			 <ul>
+								                          					                          
+		      <li>                          لاب توب شخصي
+		       </li><li>
+								                              
+			التفرغ أيام الورشة: أيام السبت والاثنين والأربعاء  من الساعة ٧ مساءً إلى الساعة ٩ مساءً على مدار مدة الورشة.
+			</li><li>
+			يتم دفع رسوم الاشتراك بعد قبول طلب الالتحاق بمقر مدرار في موعد أقصاه ٣ سبتمبر
+			</li><li>
+			لا يحق للمشارك سحب قيمة الاشتراك بعد بدء الورشة والانتظام فيها.
+			</li><li>
+			آخر موعد لإرسال طلبات الالتحاق ٢٨ أغسطس ٢٠١٥ ويتم اخطار المشاركين ١ سبتمبر ٢٠١٥.
+
+			</li></ul></p>
+		
+		
+=======
+                         <br /> <strong>
+			                                                        
+			                                                        شروط التقدم
+			                                                        </br> </strong>
+			                                                        <ul>
+			                                                        
+			                                                  
+			                              <li>                          لاب توب شخصي
+			                               </li><li>
+			                                                      
+التفرغ أيام الورشة: أيام السبت والاثنين والأربعاء  من الساعة ٧ مساءً إلى الساعة ٩ مساءً على مدار مدة الورشة.
+</li><li>
+يتم دفع رسوم الاشتراك بعد قبول طلب الالتحاق بمقر مدرار في موعد أقصاه ٣ سبتمبر
+</li><li>
+لا يحق للمشارك سحب قيمة الاشتراك بعد بدء الورشة والانتظام فيها.
+</li><li>
+آخر موعد لإرسال طلبات الالتحاق ٢٨ أغسطس ٢٠١٥ ويتم اخطار المشاركين ١ سبتمبر ٢٠١٥.
+
+</li></ul></p>
+			
+
+
+
+			<p  class="arab"> <strong> عن المدرب </strong> 
+			<br>
+			<a target="_blank" href="http://faltastico.tumblr.com/">  يوسف فلتس</a>
+			
+
+			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقمية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
+
+			 يستخدم التكنولوجيا في الإبداع؛ يجرب في مجالات التقاء العلم مع الفن مثل الفنون الرقميية التفاعلية وتصوير المعلومات والتكنولوجيا مفتوحة المصدر. </p>
+                        
+	     </div>
+        <div class="six columns" style="margin-top:10%;">
+      
+			<p class="arab">
+			علي الفنانين الراغبين في الاشتراك الاستعداد لكتابة البرامج وكذلك علي المبرمجين الاستعداد لصناعة الفن. 
+			</p>
+
+			
+		    <p class="arab"> سوف تتعلم <br />
+
+				<ul> 
+					<li> تطوير مهراتك العملية في البرمجة </li>
+					<li> استخدام الخوارزميات لعمل GIF متحرك </li>
+					
+			 		<li> بناء مواقع إلكترونية تفاعلية</li>
+			 		<li> استكشاف فن الGlitch </li>
+					<li> تعقب الوجه من خلال كاميرا الويب</li>
+					<li> تحويل البيانات لمواد صوتية </li>
+					<li> بناء مصور موسيقي (music visualizer) الخاص بك</li>
+				</ul>
+
+		  </p>
+	        
+	        <p class="arab"> 
+	        سنستخدم في الورشة لغة البرمجة
+	         <a target="_blank" href="https://processing.org/">Processing</a> 
+	         و تطبيقها للويب
+	          <a target="_blank" href="http://p5js.org/">p5.js</a>.</p>
+
+	        <br />
+	        <p class="arab">
+	        
+	        <div data-sr='wait 0.5s enter left ease-in-out 100px' style="text-align:center; margin-left: auto;margin-right: auto;">
+	            <a class="button button-primary arab" target="_blank" href="https://docs.google.com/forms/d/1oXvj5UtRQW6eJx-tYSLt2fmNx9HJz8i-JO4vM92gGZ8/viewform">  قدم </a> 
+	            <br /> <small> قبل ٢٨ أغسطس </small>
+	        </div>
+	        </p>
+
+	        <p class="arab"> لمزيد من المعلومات، راسل المدرب على
+	        <br/>youssef.faltas@gmail.com</p>
+	        
+	        
+	        
+
+        </div>
+    </div>
+    
+</div> 
+
+
+<!-- EN AR buttons -->
+
+<div  style="text-align:center; margin-left: auto;margin-right: auto;">  
+<<<<<<< HEAD
+	
+	<button id="ENbutton">English</button>
+	<button id="ARbutton" class="arab"> <small> عربي </small></button>
+	
+	<br /> <br />
+=======
+	<button id="ENbutton">English</button>
+	<button id="ARbutton" class="arab"> <small> عربي </small></button>
+>>>>>>> arabic
+</div>
+
+</div>
+
+
+<!-- More Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script language="javascript" src="assests/js/scrollReveal.min.js"></script>
+  <script language="javascript" src="assests/js/typed.min.js"></script>
+  
+<script>
+    $(function(){
+        $(".typedText").typed({
+            strings: ["A workshop ^1000 for ^1000artists.",
+            		  "A workshop for artists ^500 and ^1000 designers.",
+            		  "A workshop for artists, designers^500, and ^1000 programmers."],
+            typeSpeed: 10,
+            // time before typing starts
+            startDelay: 6000,
+            // backspacing speed
+            backSpeed: 10,
+            // time before backspacing
+            backDelay: 500,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: 2,
+        });
+    });
+  </script>
+
+
+
+  <script>
+
+      window.sr = new scrollReveal();
+
+    </script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+</body>
+</html>
