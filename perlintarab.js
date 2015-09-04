@@ -62,13 +62,13 @@ function draw() {
 
    if(!songloaded){
     song = loadSound('TD.mp3');
+    songloaded = true;
     
-    
-    
-     if(song.isLoaded() && !song.isPlaying()){
+   }
+   
+   if(frameCount>10 && song.isLoaded() && !song.isPlaying()){
        analyzeSound();
-       songloaded = true;
-     }
+       
    }
 
    if( song.isPlaying()){
