@@ -10,9 +10,10 @@ var Rout = 250;
 
 var song, fft, vol, analyzer;
 var readytoPlay = false;
+var songloaded = false;
 
 function preload(){
- song = loadSound('TD.mp3');
+// song = loadSound('TD.mp3');
 }
 
 function setup() {
@@ -58,8 +59,16 @@ function setup() {
 
 
 function draw() {
-   if(song.isLoaded() && !song.isPlaying()){
-     analyzeSound();
+
+   if(!songloaded){
+    song = loadSound('TD.mp3');
+    
+    
+    
+     if(song.isLoaded() && !song.isPlaying()){
+       analyzeSound();
+       songloaded = true;
+     }
    }
 
    if( song.isPlaying()){
