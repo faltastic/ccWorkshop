@@ -5,11 +5,11 @@ var n, N;
 var hue ;
 var strW, elpW;
 
-var Rin = 100;
-var Rout=250;
+var Rin  = 100;
+var Rout = 250;
 
 var song, fft, vol, analyzer;
-
+var readytoPlay = false;
 
 function preload(){
  song = loadSound('TD.mp3');
@@ -35,7 +35,7 @@ function setup() {
   
   // color defintions
   colorMode(HSB);
-  background(255,40);
+  background(255);
   hue = random(250);
 
   // for mobile
@@ -47,18 +47,49 @@ function setup() {
     strW = 0.8; elpW = 1.4;
     imgW = width/2;
   }
+  
+  noStroke();
+  fill(50);
+  textSize(30);
+  textAlign(CENTER);
+  text("Loading ...", width/2,height/2);
+ 
+}
 
-  song.play();
+
+function draw() {
+   if(song.isLoaded() && !song.isPlaying()){
+     analyzeSound();
+   }
+
+   if( song.isPlaying()){
+     visualizeSound();
+   }
+   
+}
+
+function analyzeSound(){
+  
   fft = new p5.FFT();
   fft.setInput(song);
   
   analyzer = new p5.Amplitude();
   analyzer.setInput(song);
-
+  
+  background(255);
+  text("Click to Play ", width/2,height/2);
+   
+  readytoPlay = true;
 }
 
-function draw() {
-  
+function mouseReleased() {
+   
+   if(readytoPlay){ song.play();}
+
+}
+   
+function visualizeSound(){
+
    vol = analyzer.getLevel();
    var spectrum = fft.analyze();
    
