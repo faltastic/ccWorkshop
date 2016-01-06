@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://fuzzy.cc/hover_glitch/test.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>glitch hover test</title>
+		<style>
+			body { 
+				font-size: 20px; 
+				color: #555; 
+				padding: 50px; 
+				font-family: sans-serif; 
+			}
+			a:link {
+			    color: #a23792;
+			}
+			a:visited {
+			    color: #a23792;
+			}
+			a:hover {
+			    color: #555;
+			}
+			a:active {
+			    color: #a23792;
+			}
+			#container1{
+				display: block;
+				position: relative;
+				//border: thin solid #00ff00;
+				width: 0px;
+				height: 0px;
+				cursor: pointer;
+			}
+			#container2{
+				display: block;
+				position: relative;
+				//border: thin solid #00ff00;
+				width: 0px;
+				height: 0px;
+				cursor: pointer;
+			}
+			#container3{
+				display: block;
+				position: relative;
+				//border: thin solid #00ff00;
+				width: 0px;
+				height: 0px;
+				cursor: pointer;
+			}
+			#title{
+				position: absolute;
+				z-index: 2;
+				left: 10px;
+				top: 10px;
+				background-color: rgba(20,20,20,0.8);
+				display: inline-block;
+				padding: 1px 5px;
+				color: #eee;
+			}
+			#canvas-hover-1{
+				position: absolute;
+				z-index: 1;
+				left:0;
+				top: 0;
+				//border: thin solid #ff0000;
+			}
+			#canvas-hover-2{
+				position: absolute;
+				z-index: 1;
+				left:0;
+				top: 0;
+				//border: thin solid #ff0000;
+			}
+			#canvas-hover-3{
+				position: absolute;
+				z-index: 1;
+				left:0;
+				top: 0;
+				//border: thin solid #ff0000;
+			}
+		</style>
+		<script src="./glitch hover test_files/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script></head>
+
+
+	<body>
+
+			Hover Glitch uses <a href="https://github.com/snorpey/glitch-canvas" target="_blank">glitch canvas</a> to create a unique glitch effect on each HOVER event. 
+			<div style="height:20px"></div>
+			<div id="container1" style="width: 432px; height: 379px;">
+				<canvas id="canvas-hover-1" width="432" height="379"></canvas>
+				<div id="title">Glitch #1</div>
+			</div>
+			<br>
+			<div id="container2" style="width: 700px; height: 525px;">
+				<canvas id="canvas-hover-2" width="700" height="525"></canvas>
+				<div id="title">Glitch #2</div>
+			</div>
+			<br>
+			<div id="container3" style="width: 450px; height: 642px;">
+				<canvas id="canvas-hover-3" width="450" height="642"></canvas>
+				<div id="title">Glitch #3</div>
+			</div>
+			<br><br>
+
+
+	<script src="./glitch hover test_files/glitch_canvas.js"></script>
+	
+
+</body></html>

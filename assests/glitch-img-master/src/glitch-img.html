@@ -1,0 +1,92 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<polymer-element name="glitch-img" attributes="src width height amount seed iterations quality">
+
+  <style>
+  </style>
+
+  <template>
+    <canvas id="glitch"></canvas>
+  </template>
+
+  <script src="glitch-canvas.min.js"></script>
+  <script>
+      Polymer('glitch-img', {
+          // glitch parameters
+           // + Math.round(Math.random() * 20),
+          amount: 5 + Math.random() * 5,
+          seed: 10 + Math.random() * 50,
+          iterations: 15 + Math.random() * 5,
+          quality: 30,
+          // Fires when an instance of the element is created
+          created: function() {},
+
+          ready: function() {
+            var glitchCanvas = this.$.glitch; 
+            var glitchCtx = this.$.glitch.getContext('2d');
+
+            var img = new Image();
+            this.image = img;
+
+            var that = this;
+
+            img.addEventListener('load', function() {
+              glitchCanvas.width = this.width;
+              glitchCanvas.height = this.height;
+
+              that.glitchImage();
+            });
+
+            img.src = this.src;
+          },
+
+          attached: function() {},
+
+          domReady: function() {
+          },
+
+          detached: function() {},
+
+          attributeChanged: function(attr, oldVal, newVal) {
+          },
+
+          // observe attr change and update glitch
+          observe: {
+            src: "update",
+            amount: "update",
+            seed: "update",
+            iterations: "update",
+            quality: "update"
+          },
+
+          update: function(oldval, newval) {
+            this.glitchImage();
+          },
+
+          glitchImage: function() {
+            var ctx = this.$.glitch.getContext('2d');
+            ctx.drawImage(this.image, 0, 0);
+            
+            var imageData = ctx.getImageData(
+              0,
+              0,
+              this.$.glitch.clientWidth,
+              this.$.glitch.clientHeight
+            );
+            
+            var parameters = { 
+              amount: this.amount,
+              seed: this.seed,
+              iterations: this.iterations,
+              quality: this.quality
+            };
+
+            glitch(imageData, parameters, function(glitchData) {
+              ctx.putImageData(glitchData, 0, 0);
+            });
+          }
+      });
+  </script>
+
+</polymer-element>

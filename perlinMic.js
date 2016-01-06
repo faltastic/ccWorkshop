@@ -12,7 +12,7 @@ var glitchAmp = 200;
 //
 
 var guiParams = function() {
-  
+
 	this.senstivity = 50;
 	this.spread =50;
   this.glitchThreshold =50;
@@ -25,7 +25,7 @@ var guiP;
 
 
 var w = []; // array of Walker objects
-var n, N;
+var N;
 
 var hue ;
 var strW, elpW;
@@ -35,6 +35,59 @@ var mic, fft, analyzer, prevVol, vol;
 var glitch = false;
 var glitchx;
 
+var n = 256;
+var minRad = 50;
+var maxRad = 600;
+var nfAng = 0.01;
+var nfTime = 0.005;
+
+var rad=400;
+
+function setup() {
+  var myCanvas = createCanvas(windowWidth/1.5, windowWidth/2.5);
+  myCanvas.parent("myBanner");
+
+  mic = new p5.AudioIn();
+  mic.start();
+
+  fft = new p5.FFT();
+  fft.setInput(mic);
+
+  analyzer = new p5.Amplitude();
+  analyzer.setInput(mic);
+
+  background(255);
+  //strokeWeight(1.5);
+}   
+
+function draw() 
+{
+  if(frameCount%500 <20){
+    noStroke();
+    fill(255, frameCount%500* 255/20);
+    rect(0, 0, width, height);
+  }
+  noFill();
+  stroke(0,45);
+
+  vol=10*analyzer.getLevel();
+  var spectrum = fft.analyze();
+
+  translate(width/2, height);
+  rotate(radians(frameCount));
+
+  beginShape();
+  for (var i=0; i<n; i++) {
+    maxRad=   map(vol*spectrum[i], 0, 255, rad, rad+500);
+    var ang = map(i, 0, n, 0, 6.283);
+    rad = map(noise(i*nfAng, frameCount*nfTime), 0, 1, minRad, maxRad);
+    var x = rad * cos(ang);
+    var y = rad * sin(ang);
+    curveVertex(x, y);
+  }
+  endShape(CLOSE);
+}
+/*
 function setup() {
 
   var myCanvas = createCanvas(windowWidth/1.5, windowWidth/2.5);
@@ -223,7 +276,7 @@ function Walker() {
   }
 }
 
-
+*/
 
 function changeN() {
 

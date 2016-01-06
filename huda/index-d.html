@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title> ReViz 18 days</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <script src="lib/reqwest.min.js"></script>
+  
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half column" style="margin-top: 10%">
+        <h4>Basic Page</h4>
+        <p>Don't panic. This is just a test</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 5%">
+      <p id="testdata"> </p>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+<script>
+  
+  // Initialize global variables
+
+  var countData =0;
+
+  var days = [];
+  
+  var newday = {
+    "date": [],
+    "names":[]
+  };
+
+  var n = days.length;
+  
+
+</script>
+
+
+<script>
+  
+
+  function parseData(data){
+
+   //console.log(data);
+   
+   /*
+   // to print to html
+
+   var vPool="";
+
+    jQuery.each(data, function(i, val) {
+        vPool += JSON.stringify(val) + "<br />";
+    });
+
+    //We add vPool HTML content to #myDIV
+    $('#testdata').html(vPool);
+    */
+
+    
+
+    for( i=0 ; i< data.length ; i++){
+      
+      n = days.length;
+
+      if(i==0){
+        days[0] = newday;
+        days[0]['date'] = data[0]['date'].split('/').map(function (x) { return parseInt(x); }); 
+        // date = [day, month, year]
+      }
+      
+      // skip unknown dates for now
+      else if(data[i]['date'] != "dunno" ){
+
+        var thatdate = data[i]['date'].split('/').map(function (x){ return parseInt(x); });
+
+        // check if we have a new day
+        if( days[n-1]['date'][0] != thatdate[0] ){
+          
+          var newtoday = {
+            "date": thatdate,
+            "names":[]
+           };
+          days.push(newtoday);
+
+
+          // I wanted to push (newday) then assign thatdate
+          // but it somehow only works with assigning 'date' before pushing
+          // days[n]['date'] = thatdate;
+        }
+
+        days[days.length-1]['names'].push(data[i]['name']);
+      }
+      
+      countData++;
+    
+    }
+
+    console.log(countData);
+    console.log(days);
+
+  //  print to html
+   var ToPrint = "";
+
+     for( i=0 ; i< days.length ; i++){
+        ToPrint += "Names for " + days[i]['date'] + " = " +  days[i]['names'].length + "<br /> <br />";
+    };
+
+    //We add vPool HTML content to #myDIV
+    $('#testdata').html(ToPrint);
+
+
+  }
+
+  reqwest({
+    url: './data/light18-order.js',
+    success: function (data) {
+      parseData(data);
+    }
+  });
+  
+
+  // Additional 
+  function convertDate(date){
+    var newdate = date.split('/');
+    newdate = new Date( newdate[2]+"-"+newdate[1]+"-"+newdate[0]);
+    return newdate;  
+  }
+
+ 
+
+
+  </script>
+  <script src="lib/jquery.js"></script>
+</body>
+</html>
