@@ -32,7 +32,8 @@ function getAngle(mx, my) {
 
 
 
-
+var c = []; // array of Walker objects
+var R = 1;
 var N = 100;
 
 var w1 = 55;
@@ -40,16 +41,18 @@ var pctBlack = 0.33;
 
 var transTime = 300;
 
-var c = []; // array of Coin objects
+
 var eyes =[];
-var kaz, blackeye;
+var kaz = [];
+var blackeye;
 
 var fade, x, y, eye, preveye, d;
 
 
 function preload() {
 
-  kaz =  loadImage("img/kazoza.png");
+  kaz[0] =  loadImage("img/emptyKaz1.png");
+  kaz[1] =  loadImage("img/emptyKaz2.png");
   blackeye =  loadImage("img/black.png");
 
   for (var i=1; i<9; i++) {
@@ -98,9 +101,10 @@ function setup() {
 
   //// Resize
 
-  var h1 = kaz.height*w1 /kaz.width;
+  var h1 = kaz[0].height*w1/kaz[0].width;
 
-  kaz.resize(w1, h1); 
+  kaz[0].resize(w1, h1);
+  kaz[1].resize(w1, h1); 
   blackeye.resize(w1, h1); 
 
   for (var i=0; i<eyes.length; i++) {
@@ -153,43 +157,58 @@ function draw() {
     y = c[i].y;  
     
     noTint();
-    image( kaz, x, y);
+    image( kaz[c[i].cover], x, y);
     
+    eye = c[i].eye;
+    preveye=  c[i].preveye; // too resource demanding 
 
     //var a = atan2(mouseY-y+height/2, mouseX-x+width/2);
 
-    if ( c[i].eye > -1) {
+    if ( eye > -1) {
+
+      //if(youPlay){
 
       d = dist(mouseX, mouseY, x, y);
-      c[i].eye = floor(map(d, 0, height/2, 0, eyes.length-1));
-    
+
+      eye = floor(map(d, 0, height/2, 0, eyes.length-1));
+      c[i].eye = eye; 
+      //}
+
       //  else 
       if ( fade<24  && d < height/2) {
-        c[i].eye = abs( floor(random(-eyes.length+1, eyes.length-1)) );
+        eye = abs( floor(random(-eyes.length+1, eyes.length-1)) );
       }
-
-      if (i==0) {
-        //tint(0, fade);
-        //image( blackeye, x, y);
-      }
-
-      tint(255, 255-fade);
-      image( eyes[c[i].preveye], x, y);
-
-      tint(255, fade); 
-      image( eyes[c[i].eye], x, y);
 
     }
 
-    else {
-      image( blackeye, x, y);
-    }
+    c[i].eye = eye; 
 
 
     // push();
     // translate(width/2,height/2);
     // rotate(a);
     //blendMode(BLEND);  
+
+
+    if ( eye >=0 ) {
+
+      if (i==0) {
+        tint(0, fade);
+        image( blackeye, x, y);
+      }
+
+      tint(255, 255-fade);
+      image( eyes[preveye], x, y);
+
+      tint(255, fade); 
+      image( eyes[eye], x, y);
+    } 
+    else {
+      image( blackeye, x, y);
+    }
+
+
+
     //pop();
   }
 
@@ -199,7 +218,7 @@ function draw() {
 
   if ( mouseY > 0.6*height && mouseY < 0.9*height) {
     stroke(255);
-     // noFill();
+    noFill();
     fill(197, 51, 54);
     rect(0.4*width, 0.7*height, 0.2*width, 0.2*height, 5);
     text("Enter", 0.45 *width, 0.75*height);
@@ -214,12 +233,17 @@ function draw() {
 
 function Coin(R, theta) {
 
+  this.cover = 0;
+  if (random(1)<0.5) { 
+    this.cover=1
+  };
 
   this.eye = abs( floor(random(-eyes.length+1, eyes.length-1)) );
 
   if ( R>5 && random(1) < pctBlack ) {
     this.eye = -1;  // blackeye
   } 
+
 
   this.preveye = this.eye;
 
@@ -244,8 +268,8 @@ function Coin(R, theta) {
 
 function makeCoins() {
 
-  var R = 1;
-  var theta = 0;
+  R = 1;
+  theta = 0;
   var n = 0;
 
   for (var i=0; i<N; i++) {
