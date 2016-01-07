@@ -39,7 +39,7 @@ var N = 100;
 var w1 = 55;
 var pctBlack = 0.33;
 
-var transTime = 300;
+var transTime = 100;
 
 
 var eyes =[];
@@ -89,7 +89,7 @@ function updateParams() {
 
 function setup() {
 
-  var myCanvas = createCanvas(windowWidth/1.25, windowHeight);
+  var myCanvas = createCanvas(windowWidth, windowHeight);
   myCanvas.parent("myBanner");
 
   //guiP = new guiParams();
@@ -112,6 +112,7 @@ function setup() {
 
   //background(197, 51, 54, 6);
   imageMode(CENTER);
+  frameRate(20);
 
 }// end setup
 
@@ -130,12 +131,12 @@ function draw() {
 
   background(197, 51, 54);  // #c53336
 
-  if ( mouseY > 0.6*height && mouseY < 0.9*height) {
+ if ( mouseY > 0.6*height && mouseY < 0.9*height) {
     stroke(255);
-    noFill();
+    //noFill();
     fill(197, 51, 54);
-    rect(0.4*width, 0.7*height, 0.2*width, 0.2*height, 5);
-    text("Enter", 0.45 *width, 0.75*height);
+    rect(0.45*width, 0.7*height, 0.1*width, 0.05*height, 5);
+    text("Enter", 0.475 *width, 0.725*height);
   }
 
 
@@ -211,12 +212,13 @@ function draw() {
   // }  
   // updateParams();
   noTint();
+  blendMode(REPLACE);
 
   if ( mouseY > 0.6*height && mouseY < 0.9*height) {
     stroke(255);
-    noFill();
+    //noFill();
     fill(197, 51, 54);
-    rect(0.4*width, 0.7*height, 0.2*width, 0.2*height, 5);
+    rect(0.45*width, 0.7*height, 0.1*width, 0.1*height, 5);
     text("Enter", 0.45 *width, 0.75*height);
   }
   //text( (mouseX/width) + "   " + (mouseY/height), 100, 200);
