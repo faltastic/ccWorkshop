@@ -50,7 +50,7 @@ var fade, x, y, eye, preveye, d;
 function preload() {
 
   kaz =  loadImage("img/kazoza.png");
-  blackeye =  loadImage("img/black.png");
+   //blackeye =  loadImage("img/black.png");
 
   for (var i=1; i<9; i++) {
     var eye = loadImage("img/eyes/eye"+i+".png");
@@ -101,7 +101,7 @@ function setup() {
   var h1 = kaz.height*w1 /kaz.width;
 
   kaz.resize(w1, h1); 
-  blackeye.resize(w1, h1); 
+  //blackeye.resize(w1, h1); 
 
   for (var i=0; i<eyes.length; i++) {
     eyes[i].resize(w1, h1);
