@@ -43,7 +43,7 @@ var transTime = 300;
 
 
 var eyes =[];
-var kaz = [];
+var kaz ;
 var blackeye;
 
 var fade, x, y, eye, preveye, d;
@@ -51,9 +51,7 @@ var fade, x, y, eye, preveye, d;
 
 function preload() {
 
-  kaz[0] =  loadImage("img/emptyKaz1.png");
-  kaz[1] =  loadImage("img/emptyKaz2.png");
-  blackeye =  loadImage("img/black.png");
+  kaz = loadImage("img/kazoza.png");
 
   for (var i=1; i<9; i++) {
     var eye = loadImage("img/eyes/eye"+i+".png");
@@ -101,12 +99,10 @@ function setup() {
 
   //// Resize
 
-  var h1 = kaz[0].height*w1/kaz[0].width;
+  var h1 = kaz.height*w1/kaz.width;
 
-  kaz[0].resize(w1, h1);
-  kaz[1].resize(w1, h1); 
-  blackeye.resize(w1, h1); 
-
+  kaz.resize(w1, h1);
+  
   for (var i=0; i<eyes.length; i++) {
     eyes[i].resize(w1, h1);
   }
@@ -157,7 +153,7 @@ function draw() {
     y = c[i].y;  
     
     noTint();
-    image( kaz[c[i].cover], x, y);
+    image( kaz, x, y);
     
     eye = c[i].eye;
     preveye=  c[i].preveye; // too resource demanding 
@@ -194,7 +190,7 @@ function draw() {
 
       if (i==0) {
         tint(0, fade);
-        image( blackeye, x, y);
+        //image( blackeye, x, y);
       }
 
       tint(255, 255-fade);
@@ -204,7 +200,7 @@ function draw() {
       image( eyes[eye], x, y);
     } 
     else {
-      image( blackeye, x, y);
+      //image( blackeye, x, y);
     }
 
 
@@ -232,11 +228,6 @@ function draw() {
 /////  Class Coin    //////////////////////////////////////
 
 function Coin(R, theta) {
-
-  this.cover = 0;
-  if (random(1)<0.5) { 
-    this.cover=1
-  };
 
   this.eye = abs( floor(random(-eyes.length+1, eyes.length-1)) );
 
