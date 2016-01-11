@@ -24,9 +24,11 @@ var videoSliderTimeEndOfVideo=240;
 //-----------------------------------------------------------------------
 
 function preload(){
- videoLooking = createVideo('data/videoLooking.mp4');
+  
+  videoLooking = createVideo('data/videoLooking.mp4');
   videoNotLooking = createVideo('data/videoNotLooking.mp4');
-  }
+
+}
 
 function setup(){    
 
