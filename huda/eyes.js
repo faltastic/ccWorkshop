@@ -42,7 +42,7 @@ var transTime = 300;
 
 var c = []; // array of Coin objects
 var eyes =[];
-var kaz, blackeye;
+var kaz;
 
 var fade, x, y, eye, preveye, d;
 
@@ -50,7 +50,6 @@ var fade, x, y, eye, preveye, d;
 function preload() {
 
   kaz =  loadImage("img/kazoza.png");
-   //blackeye =  loadImage("img/black.png");
 
   for (var i=1; i<9; i++) {
     var eye = loadImage("img/eyes/eye"+i+".png");
@@ -101,7 +100,6 @@ function setup() {
   var h1 = kaz.height*w1 /kaz.width;
 
   kaz.resize(w1, h1); 
-  //blackeye.resize(w1, h1); 
 
   for (var i=0; i<eyes.length; i++) {
     eyes[i].resize(w1, h1);

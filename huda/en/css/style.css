@@ -1,3 +1,4 @@
+
 *{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -71,10 +72,18 @@ button + label{
   display: none;
 }
 
+
 .mix img{
-  width: 100%;
-  height: auto";
+  display: block;
+  margin:0 auto;
+  max-width: 100%;
+  height:auto;
+  max-height:200px;
+
+
 }
+
+
 
 .container .mix.category-1{
   /*border-top: 2px solid limegreen;*/
@@ -85,7 +94,7 @@ button + label{
 }
 
 .container .mix:after{
-  content: attr(data-myorder);
+  /*content: attr(data-myorder);*/
   color: white;
   font-size: 16px;
   display: inline-block;
@@ -112,4 +121,10 @@ button + label{
   .container .gap{
     width: 23.5%;
   }
+}
+
+
+#pick{
+  float:right;
+  margin-bottom: 10px;
 }
