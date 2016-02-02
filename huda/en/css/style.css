@@ -5,12 +5,50 @@
   box-sizing: border-box;
 }
 
+
+@font-face
+{
+font-family:'CaviarDreamsBold';
+src: url('CaviarDreams_Bold.ttf') format('TrueType');
+}
+@font-face
+{
+font-family:'CaviarDreams';
+src: url('CaviarDreams.ttf') format('TrueType');
+}
+
+
 body, button{
-  font-family: 'Helvetica Neue', arial, sans-serif;
+  background: #eee;
+  font-family: 'Hind', sans-serif;
+
+}
+
+
+
+h1{
+  font-family:  'CaviarDreamsBold';
+  color: #eee;
+  font-size: 4.25em;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
+}
+
+#nav a{
+  font-family:  'CaviarDreams';
+  color: #eee;
+  font-size: 1.25em;
+  text-decoration: none;
+}
+
+#nav a:hover{
+ 
+  color: #ED6666;
 }
 
 .controls{
-  padding: 2%;
+  padding: 1.5% ;
+  padding-left: 6%;
   background: #333;
   color: #eee;
 }
@@ -45,7 +83,7 @@ button + label{
 }
 
 .container{
-  padding: 2% 2% 0;
+  padding: 1% 6% 0;
   text-align: justify;
   font-size: 0.1px;
   background: #eee; /*68b8c4;*/
@@ -70,6 +108,38 @@ button + label{
   background: #ED6666;
   margin-bottom: 2%;
   display: none;
+}
+
+ .normaltext{
+  width: 75%;
+  padding: 1% 6% 0;
+  text-align: justify;
+  background: #eee; 
+  padding-top: 3.5%;
+  padding-bottom: 5%;
+}
+
+
+.normaltext p{
+  font-family: 'Hind', sans-serif;
+  font-size: 1.25em;
+  padding-bottom: 1.25em;
+  line-height: 1.25em;
+
+}
+
+.normaltext a{
+  font-family: 'Hind', sans-serif;
+  font-size: 1.5em;
+  color: #ED6666;
+  text-decoration: none;
+  padding-bottom: 0;
+
+}
+
+.normaltext a:hover{
+  text-decoration: underline;
+
 }
 
 
@@ -114,6 +184,7 @@ button + label{
   .container .gap{
     width: 32%;
   }
+  
 }
 
 @media all and (min-width: 640px){
@@ -121,7 +192,38 @@ button + label{
   .container .gap{
     width: 23.5%;
   }
+  
 }
+
+
+
+
+
+
+@media all and (max-width: 640px){
+  .normaltext{
+  width: 95%;
+  padding-top: 10%;
+ }
+ .normaltext p{
+  font-size: 1.15em;
+  padding-bottom: 1.15em;
+  line-height: 1.15em;
+ }
+}
+@media all and (max-width: 420px){
+  .normaltext{
+  width: 100%;
+  padding-top: 12.5%;
+ }
+ .normaltext p{
+  font-size: 1.05em;
+  padding-bottom: 1.1em;
+  line-height: 1.1em;
+ }
+
+}
+
 
 
 #pick{
